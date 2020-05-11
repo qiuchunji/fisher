@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from http_ty import HTTP
+from app.lib.http_ty import HTTP
 from flask import current_app
 
 

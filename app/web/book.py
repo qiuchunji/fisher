@@ -3,8 +3,8 @@
 from flask import jsonify, request
 from app.forms.book import SearchForm
 from . import web
-from helper import is_isbn_or_key
-from yushu_book import YuShuBook
+from app.lib.helper import is_isbn_or_key
+from app.spider.yushu_book import YuShuBook
 
 
 # print('id为 ' + str(id(web)) + '的app注册路由')
