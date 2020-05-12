@@ -13,7 +13,7 @@ def create_app():
     register_buleprint(app)
 
     db.init_app(app)
-    db.create_all()
+    db.create_all(app=app)
     return app
 
 

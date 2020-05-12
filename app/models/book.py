@@ -24,3 +24,9 @@ class Book(db.Model):
     summary = Column(String(1000))
     image = Column(String(50))
 
+    # MVC M Model 只有数据 = 数据表
+    # 业务逻辑应该写在 MVC 里的 Model层。
+    # ORM 对象关系映射 和 Code First 有什么区别
+    # Code First 关心数据表是怎么创建
+    # ORM 通过操作数据模型来间接操作数据库 - 更为广阔（数据创建、查询、更新...）
+
