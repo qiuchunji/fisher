@@ -53,26 +53,26 @@ __exit__
 # __enter__  __exit__
 # 上下文表达式必须返回一个上下文管理器
 
-class MyResource:
-    def __enter__(self):
-        print('connect to resource')
-        return self
-
-    def __exit__(self, exc_type, exc_value, tb):
-        if tb:
-            print('process exception')
-        else:
-            print('no exception')
-        print('close resource connection')
-        return False  # True 不抛出异常, 去掉return 即返回False
-
-    def query(self):
-        print('query data')
-
-
-try:
-    with MyResource() as resource:
-        1/0
-        resource.query()
-except Exception as ex:
-    pass
+# class MyResource:
+#     def __enter__(self):
+#         print('connect to resource')
+#         return self
+#
+#     def __exit__(self, exc_type, exc_value, tb):
+#         if tb:
+#             print('process exception')
+#         else:
+#             print('no exception')
+#         print('close resource connection')
+#         return False  # True 不抛出异常, 去掉return 即返回False
+#
+#     def query(self):
+#         print('query data')
+#
+#
+# try:
+#     with MyResource() as resource:
+#         1/0
+#         resource.query()
+# except Exception as ex:
+#     pass
