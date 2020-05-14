@@ -12,7 +12,7 @@ def create_app():
     app.config.from_object('app.setting')
     register_buleprint(app)
 
-    db.init_app(app)
+    db.init_app(app)  # init_app 没有保存传进来的app对象
     with app.app_context():
         db.create_all()
     return app
