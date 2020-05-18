@@ -26,6 +26,14 @@ new_t.start()
 # 细粒度锁， 程序员 主动加锁
 # 粗粒度锁， 解释器 GIL 多核CPU 1个线程执行 一定程度上保证线程安全
 
+# python 多线程到底是不是鸡肋
+# GIL node.js 单进程， 单线程
+# 10 线程 非常严重的依赖CPU计算，CPU密集型程序（代码计算：视频解码、圆周率计算）
+# IO密集型程序 查询数据库、 请求网络资源、读写文件
+
+# python 多线程 在IO密集型 是有意义的。
+# python 多线程 不适合CPU密集型的程序。
+
 
 # print('i am kingdom')
 t = threading.currentThread()
