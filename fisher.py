@@ -10,7 +10,7 @@ app = create_app()
 if __name__ == '__main__':
     # print('id为 ' + str(id(app)) + '的启动')
     # 生产环境 nginx + uwsgi
-    app.run(host='0.0.0.0', port=81, debug=app.config['DEBUG'], threaded=True, process=1)
+    app.run(host='0.0.0.0', port=81, debug=app.config['DEBUG'], thread=True, process=1)
     # 单进程、 单线程
     # 10 个请求
 
