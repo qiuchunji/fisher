@@ -5,7 +5,23 @@ import threading
 import time
 
 
+request = None
+
+request1 = Request()
+request2 = Request()
+request3 = Request()
+
+# 字典
+# PHP 数组
+# request = {key1:value1, key2:value2, ......}
+# 多线程 唯一标识
+# request = {thread_key:Request1, ......}
+# 不同线程的id号
+# 线程隔离
+
+
 def worker():
+    request = Request()
     print('i am thread')
     t = threading.currentThread()
     time.sleep(8)
